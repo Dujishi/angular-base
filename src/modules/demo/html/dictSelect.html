@@ -1,0 +1,27 @@
+<H1>字典下拉列表</H1>
+<span>
+    用法：<br>
+    1. 用 dict.load 初始化字典的数据，和原来一致<br>
+    2. 用 dict-select 指令生成字典列表，需要设置的参数：<br>
+    a.  ng-model 最终接收数据的对象，可以直接是后台返回的数据对象<br>
+    b.  dict-entry 对应的字典项 <br>
+    c.  dict-value-name 该字典项对应在数据里的字段名<br>
+    d.  dict-change 字典项值变更的时候调用的方法，该方法接收两个参数：oldValue, newValue，比如html里属性： dict-change="dictChange" ; js里的代码：$scope.dictChange=funcction(oldValue, newValue){}
+    比如有一个数据里面有个字典项是 sex，对应在数据里的字段名是 client_sex,那么： dict-entry="sex"  dict-value-name="client_sex" 最终，选择的字典的值会直接赋给 ng-model 指定的对象<br>
+    值包括两个： 一个是 字段名为 client_sex ，对应的是字典的code，还有一个字段名为 client_sex_ ，对应的是字典的 中文显示值<br>
+
+
+</span>
+<div class="demo">
+    <div class="dict-select-demo">
+        <div dict-select class="div1" ng-model='testDict1' dict-entry="test_entry1" dict-value-name="dict1" dict-change="dictChange">
+        </div>
+
+        <div dict-select class="div2"  ng-model='testDict2'  dict-entry="test_entry2" dict-value-name="dict2">
+
+        </div>
+
+    </div>
+</div>
+
+<input class="btn btn-success" type="button" value="取值" ng-click="getDictValue();"/>

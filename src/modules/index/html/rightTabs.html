@@ -1,0 +1,7 @@
+
+<div uib-tabset  active="activeForm">
+    <div uib-tab template-url="/modules/index/html/tabs.html" heading="{{i.tagName}}" ng-repeat="i in navListArr track by $index"
+         ng-click="handelNav(i,$event)" ng-class="{active:isActive(i.tagName)}">
+    </div>
+</div>
+

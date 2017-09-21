@@ -1,0 +1,23 @@
+<!--左侧导航栏-->
+<script type="text/ng-template" id="nodes_renderer.html">
+    <div  class="tree-node tree-node-content " ng-click="creatNav(this)">
+        <span class="{{item.icon}}"></span>
+        {{item.text}}
+        <a  ng-if="item.items && item.items.length > 0" data-nodrag >
+            <span class="glyphicon2" ng-class="{'icon-arrow-down': collapsed,'icon-arrow-up': !collapsed}"></span>
+        </a>
+    </div>
+    <ol ui-tree-nodes="" ng-model="item.items" ng-class="{hidden: collapsed}">
+        <li ng-repeat="item in item.items track by $index" ui-tree-node ng-include="'nodes_renderer.html'"></li>
+    </ol>
+</script>
+
+<div class="row left-nav-bar">
+    <div class="col-sm-12">
+        <div ui-tree id="tree-root">
+            <ol ui-tree-nodes ng-model="leftNavlist">
+                <li ng-repeat="item in leftNavlist track by $index" ui-tree-node  ng-include="'nodes_renderer.html'" data-collapsed="true"></li>
+            </ol>
+        </div>
+    </div>
+</div>

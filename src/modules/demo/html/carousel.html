@@ -1,0 +1,10 @@
+<H2>轮播图<a href="https://angular-ui.github.io/bootstrap/">参考示例</a></H2>
+<input class="btn btn-success" type="button" value="指定轮播页0" ng-click="setCarousel(0);"/>
+<input class="btn btn-success" type="button" value="指定轮播页2" ng-click="setCarousel(2);"/>
+<div style="height: 200px">
+  <div uib-carousel active="carousel.active" interval="myInterval" no-wrap="false">
+    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.index"  >
+      <img once-src="slide.image" style="margin:auto;">
+    </div>
+  </div>
+</div>

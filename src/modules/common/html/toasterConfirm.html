@@ -1,0 +1,10 @@
+<div class="toaster-container">
+    <div class="toaster-comment">
+        {{ngDialogData.content}}
+    </div>
+
+    <div class="toaster-confirm-button">
+        <input type="button" class="btn btn-default  btn-lg" ng-click="closeThisDialog(false);" value="取消">
+        <input type="button" class="btn btn-success  btn-lg" ng-click="closeThisDialog(true); " value="确定">
+    </div>
+</div>

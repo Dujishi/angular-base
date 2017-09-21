@@ -1,0 +1,45 @@
+{
+  "success":true,
+  "errMsg":null,
+  "errCode":null,
+  "body":{
+    "menuList":[
+      {
+        "id":"13",
+        "text":"首页",
+        "url":"#/index/demo",
+        "pid":"0",
+        "icon":"icon-index"
+      },
+      {
+        "id":"1",
+        "text":"首页1",
+        "url":"",
+        "pid":"0",
+        "icon":"icon-index"
+      },
+      {
+        "id":"2",
+        "text":"首页11",
+        "url":"",
+        "pid":"0",
+        "icon":"icon-index"
+      },
+      {
+        "id":"11",
+        "text":"首页2",
+        "url":"#/index/demo",
+        "pid":"1",
+        "icon":"icon-index"
+      },
+      {
+        "id":"21",
+        "text":"首页21",
+        "url":"#/index/demo",
+        "pid":"2",
+        "icon":"icon-index"
+      }
+    ]
+  }
+
+}
